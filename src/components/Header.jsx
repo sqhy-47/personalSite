@@ -21,8 +21,19 @@ const Header = () => {
 
         {/*Mobile Menu Button - Visible only on Mobile */ }
         <button className='md:hidden text-3xl p-2 z-50'>
-            <i class='bxr  bx-menu-wider'  ></i> 
+            <i className='bx bx-menu text-black'></i>
         </button>
+
+
+        {/* Mobile Menu - Hidden by default */}
+        <div className='fixed top-16 bottom-0 right-0 left-0 p-5 md:hidden z-40 bg-black bg-opacity-70 backdrop-blur- md'>
+            <nav className='flex flex-col gap-6 items-center'>
+                <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">COMPANY</a>
+                <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">FEATURES</a>
+                <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">RESOURCES</a>
+                <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">DOCS</a>
+            </nav>
+        </div>
     </header>
   )
 }
